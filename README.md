@@ -1,4 +1,5 @@
-![Build Status](https://travis-ci.org/henricook/SAMLer.svg?branch=master)
+![Build Status](https://travis-ci.org/henricook/SAMLer.svg?branch=master) 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # This project is currently under construction
 
