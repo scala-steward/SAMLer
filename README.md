@@ -2,6 +2,7 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/a3ed9505a475400ba2dff149f3fc8192)](https://app.codacy.com/app/henricook/SAMLer?utm_source=github.com&utm_medium=referral&utm_content=henricook/SAMLer&utm_campaign=Badge_Grade_Dashboard)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![HitCount](http://hits.dwyl.com/henricook/SAMLer.svg)](http://hits.dwyl.com/henricook/SAMLer)
+[![GitHub release](https://img.shields.io/github/release/henricook/SAMLer.svg)](https://www.github.com/henricook/SAMLer/releases/)
 [![Follow henricook on twitter](https://img.shields.io/twitter/follow/henricook.svg?style=social&logo=twitter)](https://twitter.com/intent/follow?screen_name=henricook)
 
 # This project is currently under construction
