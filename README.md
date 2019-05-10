@@ -15,20 +15,19 @@ If your application has many businesses that would like to use Single Sign-on fl
 ### Available actions
 
 #### Must have
-  - CRUD an IDP (authenticated for administrators)
-  - OAuth /authorize to initiate IDP sign in flow (SP-initiated login)
-  - Assertion Consumer Service (ACS) endpoint to respond to login-result POSTs from IDPs and redirect the user back to the application
-  - Error logs of all exchanges
+- CRUD an IDP (authenticated for administrators)
+- OAuth /authorize to initiate IDP sign in flow (SP-initiated login)
+- Assertion Consumer Service (ACS) endpoint to respond to login-result POSTs from IDPs and redirect the user back to the application
+- Error logs of all exchanges
 
 #### Could have
-  - Lock IDPs to certain domain name(s)
-  - Find IDP based on domain name(s)
+- Lock IDPs to certain domain name(s)
+- Find IDP based on domain name(s)
 
 #### Might be nice
-  - Retrievable/Searchable audit logs of all exchanges
+- Retrievable/Searchable audit logs of all exchanges
 
 ### Stack
-
-  - Scala / Play Framework
-  - Postgres (IDP persistence)
+- Scala / Play Framework
+- Postgres (IDP persistence)
 
