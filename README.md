@@ -28,6 +28,9 @@ If your application has many businesses that would like to use Single Sign-on fl
 #### Might be nice
 -   Retrievable/Searchable audit logs of all exchanges
 
+#### Might never have
+-   Tracking and alerting for expired signing certs
+
 ### Stack
 -   Scala / Play Framework
 -   Postgres (IDP persistence)

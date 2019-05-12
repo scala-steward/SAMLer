@@ -4,7 +4,23 @@
 # ~~~~
 
 # An example controller showing a sample home page
-GET     /                           controllers.HomeController.index
+GET         /                                   controllers.HomeController.index
 
-# Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+## SAML flow
+# Initiate flow with authn
+GET         /oauth2/default/v1/authorize        controllers.HomeController.index
+
+# ACS
+POST        /sso/saml2/:idpId                   controllers.HomeController.index
+## End SAML flow
+
+## IDP Management
+GET         /idps/:idpId                        controllers.HomeController.index
+
+POST        /idps                               controllers.HomeController.index
+
+PUT         /idps/:idpId                        controllers.HomeController.index
+
+DELETE      /idps/:idpId                        controllers.HomeController.index
+## End IDP Management
