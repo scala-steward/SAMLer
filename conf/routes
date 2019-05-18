@@ -12,15 +12,15 @@ GET         /                                   controllers.HomeController.index
 GET         /oauth2/default/v1/authorize        controllers.HomeController.index
 
 # ACS
-POST        /sso/saml2/:idpId                   controllers.HomeController.index
+POST        /sso/saml2/:idpId                   controllers.HomeController.index2(idpId)
 ## End SAML flow
 
 ## IDP Management
-GET         /idps/:idpId                        controllers.HomeController.index
+GET         /idps/:idpId                        controllers.HomeController.index2(idpId)
 
 POST        /idps                               controllers.HomeController.index
 
-PUT         /idps/:idpId                        controllers.HomeController.index
+PUT         /idps/:idpId                        controllers.HomeController.index2(idpId)
 
-DELETE      /idps/:idpId                        controllers.HomeController.index
+DELETE      /idps/:idpId                        controllers.HomeController.index2(idpId)
 ## End IDP Management

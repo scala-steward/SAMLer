@@ -20,8 +20,12 @@ class HomeController @Inject()(cc: ControllerComponents)
     * will be called when the application receives a `GET` request with
     * a path of `/`.
     */
-  def index(): Action[AnyContent] = TaskAction {
-    implicit request: Request[AnyContent] =>
+  def index(): Action[AnyContent] = TaskAction { implicit request =>
+    Task.succeed(Ok("Hello World"))
+  }
+
+  def index2(idpId: String): Action[AnyContent] = TaskAction {
+    implicit request =>
       Task.succeed(Ok("Hello World"))
   }
 }
