@@ -3,7 +3,7 @@ package controllers.common
 import play.api.mvc.{Action, AnyContent, BaseController, Request, Result}
 import scalaz.zio.{DefaultRuntime, Task}
 
-trait TaskAction {
+trait CustomActions {
   self: BaseController =>
 
   protected val runtime: DefaultRuntime = new DefaultRuntime {}
