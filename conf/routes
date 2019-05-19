@@ -5,7 +5,7 @@ GET         /ping                               controllers.ApplicationControlle
 
 ## SAML flow
 # Initiate flow with authn
-GET         /oauth2/default/v1/authorize        controllers.SAMLController.index
+GET         /oauth2/default/v1/authorize        controllers.OAuthController.authorize(client_id: String, idp: String, response_type: String, scope: String, nonce: String, redirect_uri: String, state: String)
 
 # ACS
 POST        /sso/saml2/:idpId                   controllers.SAMLController.index2(idpId)
@@ -20,3 +20,6 @@ PUT         /idps/:idpId                        controllers.IDPManagementControl
 
 DELETE      /idps/:idpId                        controllers.IDPManagementController.index2(idpId)
 ## End IDP Management
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

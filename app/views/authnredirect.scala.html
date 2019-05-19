@@ -1,0 +1,51 @@
+@import model.AuthnRequest
+
+@(authnRequest: AuthnRequest)
+@*
+Dest URL = https&#x3a;&#x2f;&#x2f;accounts.google.com&#x2f;o&#x2f;saml2&#x2f;idp&#x3f;idpid&#x3d;C0352m7kw
+postauthurl = &#x25;2Foauth2&#x25;2Fv1&#x25;2Fauthorize&#x25;2Fredirect&#x25;3Fokta_key&#x25;3DvDRz1CyzFcM0djgF5IhTRBoKtcWHS1ok5jTEmfqFdXw
+*@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="robots" content="noarchive"/>
+        <meta name="googlebot" content="noarchive"/>
+        <meta name="robots" content="noindex" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="googlebot" content="noindex" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="none" />
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="application-name" content="SAMLer"/>
+        <meta name="theme-color" content="#ffffff">
+        <title>@authnRequest.clientName - Redirecting...</title>
+            <!-- TODO: favicon -->
+        <script>if (typeof module === 'object') {
+            window.module = module;
+            module = undefined;
+        }</script>
+        <script>if (window.module) module = window.module;</script>
+    </head>
+    <body>
+        <noscript><div><h3>Javascript is disabled on your browser.</h3></div></noscript>
+
+        <div id="container" style="width: 100%">
+            <form id="authnForm" name="authnForm" action="@authnRequest.destinationUrl" method="POST">
+                <input name="SAMLRequest" type="hidden" value="@authnRequest.samlRequest"/>
+                <input name="RelayState" type="hidden" value="@authnRequest.postAuthUrl"/>
+            </form>
+
+            <div align="center" style="padding: 2em; border: 1px solid #CCCCCC; width: 50em; text-align: center; margin: 20em auto;">
+                <img src="/assets/images/working-spinner.gif" alt="Working" />
+                <h1>You are being redirected...</h1>
+            </div>
+
+        </div>
+
+        <script>
+                document.forms["authnForm"].submit();
+        </script>
+    </body>
+</html>

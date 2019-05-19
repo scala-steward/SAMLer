@@ -21,6 +21,8 @@ libraryDependencies ++= Seq(
   "org.scalatestplus.play" %% "scalatestplus-play" % "4.0.2" % Test
 )
 
+// TwirlKeys.templateFormats += ("xml" -> "com.henricook.formatters.XMLFormat")
+
 // Adds additional packages into Twirl
 //TwirlKeys.templateImports += "com.henricook.controllers._"
 
