@@ -20,6 +20,7 @@ If your application has many businesses that would like to use Single Sign-on fl
 -   OAuth /authorize to initiate IDP sign in flow (SP-initiated login)
 -   Assertion Consumer Service (ACS) endpoint to respond to login-result POSTs from IDPs and redirect the user back to the application
 -   Error logs of all exchanges
+-  Management of IDPs by an authorised endpoint (basic config API key authorisation)
 
 #### Could have
 -   Lock IDPs to certain domain name(s)
@@ -30,8 +31,8 @@ If your application has many businesses that would like to use Single Sign-on fl
 
 #### Might never have
 -   Tracking and alerting for expired signing certs
+-   More complex authorisation for IDP management
 
 ### Stack
 -   Scala / Play Framework
--   Postgres (IDP persistence)
-
+-   Postgres (IDP persistence) [Not yet]
