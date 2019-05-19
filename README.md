@@ -9,6 +9,15 @@
 
 SAMLer is an API-driven, Scala, Play Framework service designed to act as an SP (Server Provider) in SAML 2.0 flows to many IDPs (Identity Providers).
 
+The application will act as a very limited OAuth2 broker, initially only supporting the authorisation code flow AKA the 3-legged, [gold standard of oauth](https://developer.okta.com/blog/2017/06/21/what-the-heck-is-oauth#oauth-flows).
+
+### Why SAMLer?
+
+Projects like Dex exist but have weaknesses for certain situations, such as:
+- CRUD of IDPs on the fly is difficult (static config files)
+- ???
+- ???
+
 ### Example Use cases
 If your application has many businesses that would like to use Single Sign-on flows via SAML2 you need a piece of software to act as a Service Provider and authenticate your users via the respective IDPs. 
 
@@ -28,6 +37,7 @@ If your application has many businesses that would like to use Single Sign-on fl
 
 #### Might be nice
 -   Retrievable/Searchable audit logs of all exchanges
+-   When a user is authenticated but not authorised redirect them to a specific page (allowed list of user storage? Reference back to a host app?)
 
 #### Might never have
 -   Tracking and alerting for expired signing certs
