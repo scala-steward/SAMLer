@@ -25,6 +25,7 @@ If your application has many businesses that would like to use Single Sign-on fl
 #### Could have
 -   Lock IDPs to certain domain name(s)
 -   Find IDP based on domain name(s)
+-   Swagger UI / api documentation
 
 #### Might be nice
 -   Retrievable/Searchable audit logs of all exchanges

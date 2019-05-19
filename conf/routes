@@ -1,26 +1,22 @@
 # Routes
-# This file defines all application routes (Higher priority routes first)
-# https://www.playframework.com/documentation/latest/ScalaRouting
-# ~~~~
 
-# An example controller showing a sample home page
-GET         /                                   controllers.HomeController.index
+GET         /ping                               controllers.ApplicationController.healthcheck
 
 
 ## SAML flow
 # Initiate flow with authn
-GET         /oauth2/default/v1/authorize        controllers.HomeController.index
+GET         /oauth2/default/v1/authorize        controllers.SAMLController.index
 
 # ACS
-POST        /sso/saml2/:idpId                   controllers.HomeController.index2(idpId)
+POST        /sso/saml2/:idpId                   controllers.SAMLController.index2(idpId)
 ## End SAML flow
 
 ## IDP Management
-GET         /idps/:idpId                        controllers.HomeController.index2(idpId)
+GET         /idps/:idpId                        controllers.IDPManagementController.index2(idpId)
 
-POST        /idps                               controllers.HomeController.index
+POST        /idps                               controllers.IDPManagementController.index
 
-PUT         /idps/:idpId                        controllers.HomeController.index2(idpId)
+PUT         /idps/:idpId                        controllers.IDPManagementController.index2(idpId)
 
-DELETE      /idps/:idpId                        controllers.HomeController.index2(idpId)
+DELETE      /idps/:idpId                        controllers.IDPManagementController.index2(idpId)
 ## End IDP Management
