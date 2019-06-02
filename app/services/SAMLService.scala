@@ -1,5 +1,8 @@
 package services
 
+import java.net.URLEncoder
+import java.util.Base64
+
 import javax.inject.Inject
 import model.AuthnRequest
 import repositories.{ClientRepository, IdpRepository}
@@ -32,8 +35,9 @@ class SAMLService @Inject()(
       )
   }
 
+  // Notes: Sign request here?
   private def mkAuthnRequest(): String = {
-    views.xml.authn().body
-    // Build twirl template
+    val templateContent = views.xml.authn().body
+    Base64.getEncoder.encodeToString(templateContent.getBytes("UTF-8"))
   }
 }
