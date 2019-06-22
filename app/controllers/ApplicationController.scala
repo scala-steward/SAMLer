@@ -2,7 +2,7 @@ package controllers
 
 import javax.inject._
 import play.api.mvc._
-import scalaz.zio.Task
+import zio.Task
 
 @Singleton
 class ApplicationController @Inject()(cc: ControllerComponents)

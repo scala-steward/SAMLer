@@ -6,7 +6,7 @@ import java.util.Base64
 import javax.inject.Inject
 import model.AuthnRequest
 import repositories.{ClientRepository, IdpRepository}
-import scalaz.zio.Task
+import zio.Task
 
 class SAMLService @Inject()(
     clientRepository: ClientRepository,

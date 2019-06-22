@@ -1,7 +1,7 @@
 package controllers.common
 
 import play.api.mvc.{Action, AnyContent, BaseController, Request, Result}
-import scalaz.zio.{DefaultRuntime, Task}
+import zio.{DefaultRuntime, Task}
 
 trait CustomActions {
   self: BaseController =>

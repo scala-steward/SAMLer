@@ -3,7 +3,7 @@ package controllers
 import javax.inject._
 import play.api._
 import play.api.mvc._
-import scalaz.zio.Task
+import zio.Task
 
 @Singleton
 class SAMLController @Inject()(cc: ControllerComponents)
