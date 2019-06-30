@@ -10,7 +10,7 @@ class IdpRepository @Inject()() {
       Idp(
         id,
         clientId,
-        "https://accounts.google.com/o/saml2/idp?idpid=C0352m7kw" // TODO: Store as Uri
+        "https://accounts.google.com/o/saml2/idp?idpid=C016hy8ou" // TODO: Store as Uri
       )
     )
 }

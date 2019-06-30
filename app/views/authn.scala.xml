@@ -1,8 +1,8 @@
 @()
 
 <saml2p:AuthnRequest xmlns:saml2p="urn:oasis:names:tc:SAML:2.0:protocol"
-                     AssertionConsumerServiceURL="https://foo.bar/sso/saml2/0oa2sdga83wXwve5r0i7"
-                     Destination="https://accounts.google.com/o/saml2/idp?idpid=C0352m7kw"
+                     AssertionConsumerServiceURL="https://localhost:9000/sso/saml2/0oa2sdga83wXwve5r0i7"
+                     Destination="https://accounts.google.com/o/saml2/idp?idpid=C016hy8ou"
                      ForceAuthn="false"
                      ID="id22200632118918861826425766"
                      IssueInstant="2019-05-10T21:02:04.909Z"
