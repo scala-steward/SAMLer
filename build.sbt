@@ -7,6 +7,7 @@ lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
 addCommandAlias("c", "compile")
 addCommandAlias("t", "test")
+addCommandAlias("r", "reload")
 
 scalaVersion := "2.12.8"
 
