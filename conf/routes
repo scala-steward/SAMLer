@@ -8,7 +8,7 @@ GET         /ping                               controllers.ApplicationControlle
 GET         /oauth2/default/v1/authorize        controllers.OAuthController.authorize(client_id: String, idp: String, response_type: String, scope: String, nonce: String, redirect_uri: String, state: String)
 
 # ACS
-POST        /sso/saml2/:idpId                   controllers.SAMLController.index2(idpId)
+POST        /sso/saml2/:idpId                   controllers.SAMLController.respondToAuthn(idpId)
 ## End SAML flow
 
 ## IDP Management
@@ -23,3 +23,5 @@ DELETE      /idps/:idpId                        controllers.IDPManagementControl
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+GET     /favicon.ico               controllers.Assets.at(path="/public", file="favicon.ico")

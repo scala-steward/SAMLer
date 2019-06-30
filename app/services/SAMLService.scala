@@ -9,23 +9,24 @@ import repositories.{ClientRepository, IdpRepository}
 import zio.Task
 
 class SAMLService @Inject()(
-    clientRepository: ClientRepository,
-    idpRepository: IdpRepository
+  clientRepository: ClientRepository,
+  idpRepository: IdpRepository
 ) extends Logging {
+
   def buildAuthnRequest(
-      clientId: String,
-      idpId: String,
-      response_type: String,
-      scope: String,
-      nonce: String,
-      redirectUri: String,
-      state: String
+    clientId: String,
+    idpId: String,
+    response_type: String,
+    scope: String,
+    nonce: String,
+    redirectUri: String,
+    state: String
   ): Task[AuthnRequest] = {
 
     for {
       client <- clientRepository.getClient(clientId)
-      idp    <- idpRepository.getIdp(client.id, idpId)
-      acsUrl       = s"https://localhost:9000/sso/saml2/$idpId"
+      idp <- idpRepository.getIdp(client.id, idpId)
+      acsUrl = s"https://localhost:9001/sso/saml2/$idpId"
       authnRequest = mkAuthnRequest()
     } yield
       AuthnRequest(

@@ -22,6 +22,14 @@ libraryDependencies ++= Seq(
   "org.scalatestplus.play" %% "scalatestplus-play" % "4.0.3" % Test
 )
 
+initialize ~= { _ =>
+  System.setProperty("http.port", "9000")
+  System.setProperty("https.port", "9001")
+}
+
+// Don't reload unless we want to reload
+Global / onChangedBuildSource := IgnoreSourceChanges
+
 // TwirlKeys.templateFormats += ("xml" -> "com.henricook.formatters.XMLFormat")
 
 // Adds additional packages into Twirl
