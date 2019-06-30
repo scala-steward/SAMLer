@@ -1,3 +1,8 @@
 package model
 
-case class Idp(id: String, clientId: String, destinationUrl: String)
+case class Idp(
+    id: String,
+    clientId: String,
+    destinationUrl: String,
+    issuer: String
+)

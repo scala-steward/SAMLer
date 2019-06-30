@@ -1,11 +1,10 @@
 package services
 
-import java.net.URLEncoder
 import java.util.Base64
 
 import javax.inject.Inject
 import model.AuthnRequest
-import play.api.{Logger, Logging}
+import play.api.Logging
 import repositories.{ClientRepository, IdpRepository}
 import zio.Task
 
@@ -25,9 +24,9 @@ class SAMLService @Inject()(
 
     for {
       client <- clientRepository.getClient(clientId)
-      idp <- idpRepository.getIdp(client.id, idpId)
+      idp    <- idpRepository.getIdp(client.id, idpId)
+      acsUrl       = s"https://localhost:9000/sso/saml2/$idpId"
       authnRequest = mkAuthnRequest()
-      _ = logger.warn("=== Authn contents = " + authnRequest)
     } yield
       AuthnRequest(
         client.name,

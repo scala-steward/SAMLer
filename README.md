@@ -29,6 +29,7 @@ If your application has many businesses that would like to use Single Sign-on fl
 -   Assertion Consumer Service (ACS) endpoint to respond to login-result POSTs from IDPs and redirect the user back to the application
 -   Error logs of all exchanges
 -  Management of IDPs by an authorised endpoint (basic config API key authorisation)
+-  Support for forwarding custom fields to the SP
 
 #### Could have
 -   Lock IDPs to certain domain name(s)
