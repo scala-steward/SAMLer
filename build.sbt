@@ -16,7 +16,7 @@ scalacOptions += "-Ypartial-unification"
 libraryDependencies ++= Seq(
   guice,
   "dev.zio" %% "zio" % "1.0.0-RC11-1",
-  "org.typelevel" %% "cats-core" % "2.0.0-RC1",
+  "org.typelevel" %% "cats-core" % "2.0.0-RC2",
   "com.olegpy" %% "better-monadic-for" % "0.3.0",
   // Test
   "org.scalatestplus.play" %% "scalatestplus-play" % "4.0.3" % Test
