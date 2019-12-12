@@ -19,7 +19,7 @@ libraryDependencies ++= Seq(
   "org.typelevel" %% "cats-core" % "2.0.0-RC1",
   "com.olegpy" %% "better-monadic-for" % "0.3.0",
   // Test
-  "org.scalatestplus.play" %% "scalatestplus-play" % "4.0.3" % Test
+  "org.scalatestplus.play" %% "scalatestplus-play" % "5.0.0" % Test
 )
 
 initialize ~= { _ =>
