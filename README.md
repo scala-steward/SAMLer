@@ -5,7 +5,7 @@
 [![GitHub release](https://img.shields.io/github/release/henricook/SAMLer.svg)](https://www.github.com/henricook/SAMLer/releases/)
 [![Follow henricook on twitter](https://img.shields.io/twitter/follow/henricook.svg?style=social&logo=twitter)](https://twitter.com/intent/follow?screen_name=henricook)
 
-## This project is currently under construction
+## This project is currently under construction / very inactive / not even barely working
 
 SAMLer is an API-driven, Scala, Play Framework service designed to act as an SP (Server Provider) in SAML 2.0 flows to many IDPs (Identity Providers).
 
